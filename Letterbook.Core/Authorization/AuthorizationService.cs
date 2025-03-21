@@ -11,9 +11,9 @@ public class AuthorizationService : IAuthorizationService
 		return Decision.Allow("todo", claims);
 	}
 
-	public Decision Update<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated
+	public bool Update<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated
 	{
-		return Decision.Allow("todo", claims);
+		return false;
 	}
 
 	public Decision Delete<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated

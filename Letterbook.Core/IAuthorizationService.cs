@@ -8,7 +8,7 @@ namespace Letterbook.Core;
 public interface IAuthorizationService
 {
 	public Decision Create<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated;
-	public Decision Update<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated;
+	public bool Update<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated;
 	public Decision Delete<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated;
 	public Decision Attribute<T>(IEnumerable<Claim> claims, T target, Uuid7 attributeTo, Uuid7 profile) where T : IFederated;
 	public Decision Publish<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated;
