@@ -6,7 +6,7 @@ namespace Letterbook.Core.Authorization;
 
 public class AuthorizationService : IAuthorizationService
 {
-	public Decision Create<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated
+	public int Create<T>(IEnumerable<Claim> claims, T target, Uuid7 profile) where T : IFederated
 	{
 		return Decision.Allow("todo", claims);
 	}
